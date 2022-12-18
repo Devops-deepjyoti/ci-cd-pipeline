@@ -1,11 +1,10 @@
 from github import Github
 from datetime import datetime, timedelta
 import pytz
-import re
-import string
+import os
 
 
-g = Github("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")
+g = Github("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")
 
 repo = g.get_repo("AcharyaBhattS/Project1_HV")
 
@@ -101,8 +100,11 @@ print('Difference: ', c)
 
 if c < timedelta(minutes=5):
     print("Commit time is < 5")
+    os.system("bash myScript.sh")
 else:
     print("Commit time is >= 5")
+
+
     
 
 # minutes = c.total_seconds() / 60
